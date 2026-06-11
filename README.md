@@ -1,42 +1,34 @@
-# JP Morgan Virtual Experience Project
+# Financial Transaction Processor
 
 ## Overview
-Built a transaction processing system using Spring Boot and Kafka.
+This project simulates a real-time transaction processing system using Spring Boot and Apache Kafka.
 
-## Features
-- Event-driven architecture using Kafka
-- Real-time incentive calculation
-- REST APIs for transaction handling
+It processes financial transactions asynchronously and calculates incentives based on business logic.
+
+## Architecture
+- Producer sends transaction events
+- Kafka handles message queue
+- Consumer processes transactions
+- Incentives are calculated and stored
 
 ## Tech Stack
 - Java 17
 - Spring Boot
 - Apache Kafka
+- Maven
 
-## How to Run
-1. Clone the repository
-   git clone https://github.com/your-username/your-repo-name.git
+## Features
+- Event-driven architecture
+- Real-time transaction processing
+- Incentive calculation system
+- REST API endpoints
 
-2. Navigate to project folder
-   cd your-repo-name
+## How It Works
+1. Transaction is created
+2. Sent to Kafka topic
+3. Consumer listens and processes it
+4. Incentive is calculated
+5. Data is stored
 
-3. Start Kafka and Zookeeper
-   (Make sure Kafka is running on localhost:9092)
-
-4. Build the project
-   ./mvnw clean install
-
-5. Run the Spring Boot application
-   ./mvnw spring-boot:run
-
-6. Test APIs
-   Use Postman or curl to send requests to:
-   http://localhost:8080
-
-## Project Explanation
-
-This project simulates a transaction processing system using an event-driven architecture.
-
-Transactions are produced and sent to a Kafka topic. A Kafka consumer listens to these events, processes each transaction, and calculates incentives based on predefined business logic.
-
-The system uses Spring Boot for building REST APIs and handling backend operations. The architecture ensures scalability and real-time processing of financial data.
+## Note
+Inspired by JP Morgan Software Engineering Virtual Experience (Forage)
